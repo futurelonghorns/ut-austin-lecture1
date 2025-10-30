@@ -3,60 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>UT Austin Lecture | Contact</title>
-  <meta name="description" content="Contact form for questions about the UT Austin lecture event ." />
+  <title>UT Austin Lecture — Contact</title>
+  <meta name="description" content="Questions about the one-time Halloweekend UT Austin lecture? Contact us.">
   <style>
-    :root { --burnt:#bf5700; --ink:#333; --bg:#f5f5f5; }
-    * { box-sizing:border-box; }
-    body { margin:0; font-family: Arial, Helvetica, sans-serif; background:var(--bg); color:var(--ink); }
-    header { background:var(--burnt); color:#fff; padding:28px 16px; text-align:center; }
-    nav { background:#222; display:flex; gap:8px; justify-content:center; flex-wrap:wrap; }
-    nav a { color:#fff; text-decoration:none; padding:12px 16px; display:inline-block; }
-    nav a:hover { background:var(--burnt); }
-    main { max-width:720px; margin:32px auto; background:#fff; padding:28px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,.06); }
-    h2 { color:var(--burnt); margin-top:0; }
-    form { display:flex; flex-direction:column; gap:10px; }
-    label { font-weight:600; }
-    input, textarea { width:100%; padding:10px; border:1px solid #ccc; border-radius:6px; }
-    button { background:var(--burnt); color:#fff; border:none; padding:12px 16px; border-radius:6px; cursor:pointer; }
-    button:hover { filter:brightness(.95); }
-    .note { font-size:13px; color:#555; margin-top:8px; }
-    footer { background:#222; color:#fff; text-align:center; padding:14px; font-size:14px; margin-top:24px; }
+    :root{--burnt:#bf5700;--burnt-2:#a44b00;--ink:#1f1f1f;--bg:#fafafa;--card:#ffffff;--radius:14px;--shadow:0 10px 30px rgba(0,0,0,.08)}
+    *{box-sizing:border-box} html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    header{background:linear-gradient(180deg,#000 0%, #3a210e 60%, var(--burnt) 140%);color:#fff}
+    .topbar{max-width:1100px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{height:48px;width:auto;background:#fff;border-radius:6px}
+    nav a{color:#fff;padding:8px 12px;border-radius:8px} nav a:hover{background:rgba(255,255,255,.12)}
+    main{max-width:800px;margin:28px auto;padding:0 20px 40px}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px}
+    h1{margin:0 0 8px} .sub{opacity:.9}
+    form{display:grid;gap:12px;margin-top:12px}
+    label{font-weight:700}
+    input,textarea{width:100%;padding:12px 14px;border:1px solid #ddd;border-radius:10px;font-size:15px}
+    button{padding:12px 16px;border-radius:10px;border:2px solid transparent;background:var(--burnt);color:#fff;font-weight:800;cursor:pointer}
+    button:hover{background:var(--burnt-2)}
+    .note{font-size:13px;color:#5c5c5c;margin-top:8px}
+    footer{background:#111;color:#fff;padding:16px 20px;text-align:center;font-size:13px}
   </style>
 </head>
 <body>
   <header>
-    <h1>Contact Us</h1>
+    <div class="topbar">
+      <div class="brand">
+        <a href="https://www.utexas.edu/" target="_blank" rel="noopener"><img src="ut-logo.png" alt="UT Austin logo"></a>
+        <div>
+          <h1>Contact</h1>
+          <div class="sub">One-time, high-value Halloweekend session — ask us anything</div>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="schedule.html">Schedule</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
   <main>
-    <h2>📨 Get in Touch</h2>
-    <p>Have questions about the lecture or need more info? Send us a message below.</p>
-
-    <!-- This form is static (it won't send yet). I can wire it to email/Google Sheets if you want. -->
-    <form onsubmit="event.preventDefault(); alert('Thanks! Your message was captured locally. I can wire this to email or Google Sheets if you want.');">
-      <label for="name">Full Name</label>
-      <input id="name" name="name" type="text" required />
-
-      <label for="email">Email Address</label>
-      <input id="email" name="email" type="email" required />
-
-      <label for="message">Your Message</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit">Send Message</button>
-      <p class="note">Note: This demo form doesn’t send yet. I can hook it up to FormSubmit, Google Forms, or Netlify Forms.</p>
-    </form>
+    <div class="card">
+      <h2 style="margin-top:0;color:#bf5700">Send a Message</h2>
+      <!-- Demo-only form; replace action with a form service if you want it to send -->
+      <form onsubmit="event.preventDefault(); alert('Thanks! Message captured locally. I can wire this to email/Google Sheets if you want.');">
+        <div>
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div>
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+        <button type="submit">Send</button>
+        <p class="note">Note: This form is static for now. I can hook it to FormSubmit, Netlify Forms, or Google Forms so it actually sends.</p>
+      </form>
+    </div>
   </main>
 
-  <footer>© 2025 University of Texas at Austin — Hook ’Em Horns!</footer>
+  <footer>© 2025 — Informational session for aspiring students.</footer>
 </body>
 </html>
-
-
