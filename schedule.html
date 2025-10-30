@@ -3,49 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>UT Austin Lecture | Schedule</title>
-  <meta name="description" content="Full event timeline for the UT Austin lecture on Nov 1, 2025 (1:00–3:00 PM)." />
+  <title>UT Austin Lecture — Schedule</title>
+  <meta name="description" content="Detailed agenda for the Halloweekend-exclusive UT Austin lecture (Nov 1, 2025).">
   <style>
-    :root { --burnt:#bf5700; --ink:#333; --bg:#f5f5f5; }
-    * { box-sizing:border-box; }
-    body { margin:0; font-family: Arial, Helvetica, sans-serif; background:var(--bg); color:var(--ink); }
-    header { background:var(--burnt); color:#fff; padding:28px 16px; text-align:center; }
-    nav { background:#222; display:flex; gap:8px; justify-content:center; flex-wrap:wrap; }
-    nav a { color:#fff; text-decoration:none; padding:12px 16px; display:inline-block; }
-    nav a:hover { background:var(--burnt); }
-    main { max-width:880px; margin:32px auto; background:#fff; padding:28px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,.06); }
-    h1, h2 { color:#fff; margin:0; }
-    h2.section { color:var(--burnt); margin:0 0 12px; }
-    table { width:100%; border-collapse:collapse; margin-top:12px; }
-    th, td { padding:12px; border:1px solid #ddd; text-align:left; }
-    th { background:#fff2e8; }
-    footer { background:#222; color:#fff; text-align:center; padding:14px; font-size:14px; margin-top:24px; }
+    :root{--burnt:#bf5700;--burnt-2:#a44b00;--ink:#1f1f1f;--bg:#fafafa;--card:#ffffff;--radius:14px;--shadow:0 10px 30px rgba(0,0,0,.08)}
+    *{box-sizing:border-box} html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    header{background:linear-gradient(180deg,#000 0%, #3a210e 60%, var(--burnt) 140%);color:#fff}
+    .topbar{max-width:1100px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{height:48px;width:auto;background:#fff;border-radius:6px}
+    nav a{color:#fff;padding:8px 12px;border-radius:8px} nav a:hover{background:rgba(255,255,255,.12)}
+    main{max-width:1100px;margin:28px auto;padding:0 20px 40px}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px}
+    h1{margin:0 0 8px} .sub{opacity:.9}
+    table{width:100%;border-collapse:collapse;margin-top:14px}
+    th,td{padding:14px;border-bottom:1px solid #eee;text-align:left}
+    th{background:#fff4ea;color:#5a2c00}
+    .note{margin-top:12px;color:#5c5c5c;font-size:14px}
+    footer{background:#111;color:#fff;padding:16px 20px;text-align:center;font-size:13px}
+    .badge{display:inline-block;background:#ffefe2;color:#bf5700;font-weight:700;padding:6px 10px;border-radius:999px;font-size:12px}
   </style>
 </head>
 <body>
   <header>
-    <h1>UT Austin Lecture — Schedule</h1>
+    <div class="topbar">
+      <div class="brand">
+        <a href="https://www.utexas.edu/" target="_blank" rel="noopener"><img src="ut-logo.png" alt="UT Austin logo"></a>
+        <div>
+          <h1>Schedule</h1>
+          <div class="badge">Halloweekend Exclusive — One-Time Session</div>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="schedule.html">Schedule</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
   <main>
-    <h2 class="section">🕒 Event Timeline (Nov 1, 2025)</h2>
-    <table>
-      <tr><th>Time</th><th>Activity</th><th>Speaker</th></tr>
-      <tr><td>1:00 PM – 1:15 PM</td><td>Welcome &amp; Introduction</td><td>Admissions Team</td></tr>
-      <tr><td>1:15 PM – 1:45 PM</td><td>Inside UT Academics</td><td>Prof. Rivera</td></tr>
-      <tr><td>1:45 PM – 2:15 PM</td><td>Student Life Panel</td><td>Student Ambassadors</td></tr>
-      <tr><td>2:15 PM – 2:45 PM</td><td>Admissions Q&amp;A</td><td>Admissions Counselor</td></tr>
-      <tr><td>2:45 PM – 3:00 PM</td><td>Closing Remarks &amp; Networking</td><td>Event Hosts</td></tr>
-    </table>
+    <div class="card">
+      <h2 style="margin:0 0 6px;color:#bf5700">Saturday, November 1, 2025 • 1:00 PM – 3:00 PM</h2>
+      <p class="sub">University of Texas at Austin • High-value briefing for aspiring students</p>
+
+      <table>
+        <tr><th>Time</th><th>Topic</th><th>Presenter</th></tr>
+        <tr><td>1:00 – 1:15 PM</td><td>Welcome & Strategic Overview (why UT, why now)</td><td>Admissions Team</td></tr>
+        <tr><td>1:15 – 1:45 PM</td><td>Inside UT Academics: Competitive Majors & Pathways</td><td>Faculty Guest</td></tr>
+        <tr><td>1:45 – 2:15 PM</td><td>Student Life, Scholarships & Research On-Ramps</td><td>Student Ambassadors</td></tr>
+        <tr><td>2:15 – 2:45 PM</td><td>Admissions Tactics: Standing Out in a Large Applicant Pool</td><td>Admissions Counselor</td></tr>
+        <tr><td>2:45 – 3:00 PM</td><td>Final Takeaways & Next Steps (Halloweekend checklist)</td><td>Event Hosts</td></tr>
+      </table>
+
+      <p class="note">Note: This session is offered once during Halloweekend due to high campus traffic; no encore date is planned.</p>
+    </div>
   </main>
 
-  <footer>© 2025 University of Texas at Austin</footer>
+  <footer>© 2025 — Informational session for aspiring students.</footer>
 </body>
 </html>
-
