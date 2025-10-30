@@ -3,72 +3,152 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>UT Austin Lecture | Home</title>
-  <meta name="description" content="UT Austin lecture for aspiring students on Saturday, November 1 , 2025, 1:00–3:00 PM. Learn about majors, admissions, and student life." />
+  <title>UT Austin Lecture — Halloweekend Exclusive</title>
+  <meta name="description" content="One-time, high-value UT Austin lecture for aspiring students — Halloweekend exclusive. Saturday, Nov 1, 2025, 1–3 PM.">
   <style>
-    :root { --burnt:#bf5700; --ink:#333; --bg:#f5f5f5; }
-    * { box-sizing:border-box; }
-    body { margin:0; font-family: Arial, Helvetica, sans-serif; background:var(--bg); color:var(--ink); }
-    header { background:var(--burnt); color:#fff; padding:28px 16px; text-align:center; }
-    nav { background:#222; display:flex; gap:8px; justify-content:center; flex-wrap:wrap; }
-    nav a { color:#fff; text-decoration:none; padding:12px 16px; display:inline-block; }
-    nav a:hover { background:var(--burnt); }
-    main { max-width:880px; margin:32px auto; background:#fff; padding:28px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,.06); }
-    h1, h2 { color:var(--burnt); margin-top:0; }
-    .details { background:#fff7f0; border-left:4px solid var(--burnt); padding:12px 16px; margin:16px 0 24px; }
-    .btn { display:inline-block; background:var(--burnt); color:#fff; padding:10px 16px; border-radius:6px; text-decoration:none; }
-    .btn:hover { filter:brightness(.95); }
-    footer { background:#222; color:#fff; text-align:center; padding:14px; font-size:14px; }
+    :root{
+      --burnt:#bf5700; --burnt-2:#a44b00; --ink:#1f1f1f; --muted:#5c5c5c; --bg:#fafafa; --card:#ffffff; --accent:#ffefe2;
+      --radius:14px; --shadow:0 10px 30px rgba(0,0,0,.08);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    a{color:var(--burnt);text-decoration:none}
+    header{
+      background:linear-gradient(180deg,#000000 0%, #3a210e 60%, var(--burnt) 140%);
+      color:#fff; padding:18px 0 0;
+    }
+    .topbar{
+      max-width:1100px; margin:0 auto; padding:10px 20px;
+      display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;
+    }
+    .brand{display:flex; align-items:center; gap:14px}
+    .brand img{height:56px; width:auto; display:block; border-radius:6px; background:#fff}
+    .brand-title{display:flex; flex-direction:column}
+    .brand-title h1{font-size:22px; line-height:1.2; margin:0}
+    .brand-title span{font-size:13px; opacity:.9}
+    nav a{color:#fff; padding:8px 12px; border-radius:8px}
+    nav a:hover{background:rgba(255,255,255,.12)}
+    .hero{
+      max-width:1100px; margin:28px auto 40px; padding:0 20px 40px;
+      display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:stretch;
+    }
+    .card{
+      background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow);
+      padding:28px;
+    }
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      background:var(--accent); color:var(--burnt); font-weight:700; padding:8px 12px; border-radius:999px; font-size:13px;
+    }
+    .hero h2{font-size:32px; margin:14px 0 12px}
+    .lead{color:#2b2b2b; font-size:17px; line-height:1.55; margin:0 0 14px}
+    .bullets{margin:14px 0 0; padding-left:18px}
+    .bullets li{margin:6px 0; color:#333}
+    .cta-row{display:flex; flex-wrap:wrap; gap:12px; margin-top:18px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      padding:12px 18px; border-radius:10px; font-weight:700; border:2px solid transparent; cursor:pointer;
+    }
+    .btn-primary{background:var(--burnt); color:#fff}
+    .btn-primary:hover{background:var(--burnt-2)}
+    .btn-ghost{background:#fff; color:var(--burnt); border-color:var(--burnt)}
+    .btn-ghost:hover{background:#fff4ea}
+    .info-grid{
+      display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px;
+    }
+    .info{
+      background:#fff7ef; border:1px solid #ffd7b6; border-radius:12px; padding:12px 14px; font-size:15px;
+    }
+    .meta{
+      margin-top:10px; color:#fff; opacity:.9; font-size:14px; padding:0 20px 18px; text-align:center;
+    }
+    .section{
+      max-width:1100px; margin:0 auto 48px; padding:0 20px;
+      display:grid; grid-template-columns:repeat(3,1fr); gap:18px;
+    }
+    .tile{background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); padding:22px}
+    .tile h3{margin:0 0 8px; color:var(--burnt)}
+    footer{background:#111; color:#fff; padding:16px 20px; text-align:center; font-size:13px}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .section{grid-template-columns:1fr}
+      .brand img{height:48px}
+      .brand-title h1{font-size:20px}
+    }
   </style>
 </head>
 <body>
-  
-<header>
-  <div class="brand" style="display:flex; justify-content:space-between; align-items:center;">
-    <h1>UT Austin Lecture for Aspiring Students</h1>
-    <a class="ut-link" href="https://www.utexas.edu/" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:8px; text-decoration:none; color:#bf5700; font-weight:700;">
-      <img src="ut-logo.png" alt="UT Austin Logo" style="height:28px; width:auto; display:block;">
-      Official UT Austin Website
-    </a>
-  </div>
-  <p>Learn, Explore, and Connect with the Longhorn Spirit!</p>
-</header>
-
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="schedule.html">Schedule</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <main>
-    <h2>📅 Event Information</h2>
-    <div class="details">
-      <p><strong>Date:</strong> Saturday, November 1, 2025</p>
-      <p><strong>Time:</strong> 1:00 PM – 3:00 PM</p>
-      <p><strong>Location:</strong> University of Texas at Austin</p>
+  <header>
+    <div class="topbar">
+      <div class="brand">
+        <a href="https://www.utexas.edu/" target="_blank" rel="noopener" aria-label="Official UT Austin Website">
+          <img src="ut-logo.png" alt="UT Austin logo">
+        </a>
+        <div class="brand-title">
+          <h1>UT Austin Lecture for Aspiring Students</h1>
+          <span>Hosted near campus • High-impact admissions & academics briefing</span>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.utexas.edu/" target="_blank" rel="noopener">UT Austin</a>
+      </nav>
     </div>
 
-    <h2>🎓 About the Lecture</h2>
-    <p>
-      This session welcomes high school and transfer students who dream of joining UT Austin.
-      Professors and student ambassadors will share insights into academics, student life, and
-      the admissions process, followed by Q&amp;A and networking.
-    </p>
+    <div class="hero">
+      <div class="card">
+        <span class="badge">🎃 Halloweekend Exclusive • One-Time Only</span>
+        <h2>Unlock high-value insights to become a Longhorn.</h2>
+        <p class="lead">
+          This is a <strong>single-session</strong>, <strong>high-value</strong> lecture designed to give you the clearest path to UT Austin —
+          timed for <strong>Halloweekend</strong> when thousands of visitors are on campus. Seats are limited due to demand.
+        </p>
+        <ul class="bullets">
+          <li>Actionable admissions strategies & timelines</li>
+          <li>How to stand out in competitive majors</li>
+          <li>Scholarships, research, and student-life pathways</li>
+          <li>Live Q&amp;A with current students and advisors</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="schedule.html">See the Agenda</a>
+          <a class="btn btn-ghost" href="contact.html">Ask a Question</a>
+        </div>
+      </div>
 
-    <h2>⭐ Highlights</h2>
-    <ul>
-      <li>Overview of UT Austin programs and majors</li>
-      <li>Admissions tips &amp; application timeline</li>
-      <li>Student life, clubs, and campus resources</li>
-      <li>Networking with current UT students</li>
-    </ul>
+      <div class="card">
+        <h3 style="margin:0 0 8px;color:var(--burnt)">Event Details</h3>
+        <div class="info-grid">
+          <div class="info"><strong>Date:</strong> Saturday, November 1, 2025</div>
+          <div class="info"><strong>Time:</strong> 1:00 PM – 3:00 PM</div>
+          <div class="info"><strong>Location:</strong> University of Texas at Austin (near main campus)</div>
+          <div class="info"><strong>Audience:</strong> High school & transfer students</div>
+        </div>
+        <p style="margin-top:14px;color:var(--muted);font-size:14px">
+          Note: This Halloweekend session is offered once; no encore date is scheduled.
+        </p>
+      </div>
+    </div>
 
-    <a class="btn" href="schedule.html">View Schedule</a>
-  </main>
+    <p class="meta">⏳ Seats are limited during Halloweekend due to the massive influx of visitors — early arrival recommended.</p>
+  </header>
 
-  <footer>© 2025 University of Texas at Austin — Hook ’Em Horns!</footer>
+  <section class="section">
+    <div class="tile">
+      <h3>Why this session?</h3>
+      <p>Cut through noise with a concise, expert-led briefing focused on what actually moves the needle for UT admissions and success.</p>
+    </div>
+    <div class="tile">
+      <h3>What you’ll take away</h3>
+      <p>A clear application game-plan, major-specific insights, and a set of next steps you can execute immediately.</p>
+    </div>
+    <div class="tile">
+      <h3>Who should attend</h3>
+      <p>Motivated students and families seeking practical guidance during a high-traffic Halloweekend visit.</p>
+    </div>
+  </section>
+
+  <footer>© 2025 — Informational session for aspiring students. <a href="https://www.utexas.edu/" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline">UT Austin</a></footer>
 </body>
 </html>
-
-
